@@ -1,10 +1,10 @@
-
+import HomeScreen from "./components/homescreen"
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-   
+      <HomeScreen />
     </div>
   );
 }
