@@ -36,9 +36,11 @@ const HomeScreen = () => {
   }, [query]);
 
   return (
+    
     <div className="home-container">
       <h1 className="title">Hacker<br/> News <br/>Search</h1>
       <div className="search-container">
+   
         <input
           className="search-input"
           type="text"
