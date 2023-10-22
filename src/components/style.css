@@ -112,22 +112,26 @@ body {
 
 /* Post-Screen*/
 .parent-container {
-  background-color: #7a7c75;
+  /* background-color: #7a7c75; */
+  background-color: #000;
 }
 
 .container {
   width: 100%;
-  max-width: 1000px;
+  max-width: 1800px;
   margin: 20px auto;
   background-color: #000;
   color: #ad0707f5;
-  padding: 20px;
+  padding: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
 }
+.postscreen-title{
+  font-size: 6rem;
+}
 
 .post-title {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   margin-bottom: 10px;
 }
 
@@ -147,12 +151,13 @@ body {
 
 .comments-heading {
   margin-top: 20px;
-  font-size: 1.2rem;
+  font-size: 2.2rem;
 }
 
 .comments-list {
   list-style: none;
   padding: 0;
+  font-size: 1.7rem;
 }
 
 .comment {
@@ -173,3 +178,92 @@ body {
   color: red;
 }
 
+/* Responsive Styles */
+
+/* Small devices  */
+
+@media only screen and (max-width: 480px) {
+  .container {
+    padding: 15px;
+  }
+  .postscreen-title {
+    font-size: 3rem;
+  }
+  .post-title {
+    font-size: 1.5rem;
+  }
+
+  .points,
+  .comments-heading {
+    font-size: 1rem;
+  }
+
+  .comment-box {
+    padding: 10px;
+    overflow: hidden; /* Add overflow property to prevent content overflow */
+    white-space: wrap; /* Prevent text from wrapping to the next line */
+    text-overflow: ellipsis; /* Show an ellipsis (...) when text is truncated */
+  }
+}
+
+
+
+
+/* Small devices (landscape phones) */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .container {
+    padding: 25px;
+  }
+  .postscreen-title {
+    font-size: 3rem;
+  }
+  .post-title {
+    font-size: 1.5rem;
+  }
+
+  .points,
+  .comments-heading {
+    font-size: 1rem;
+  }
+
+  .comment-box {
+    padding: 10px;
+    overflow: hidden; /* Add overflow property to prevent content overflow */
+    white-space: wrap; /* Prevent text from wrapping to the next line */
+    text-overflow: ellipsis; /* Show an ellipsis (...) when text is truncated */
+  }
+}
+
+
+/* Medium devices (tablets) */
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+  .container {
+    padding: 35px;
+  }
+  .postscreen-title {
+    font-size: 3rem;
+  }
+  .post-title {
+    font-size: 1.5rem;
+  }
+
+  .points,
+  .comments-heading {
+    font-size: 1rem;
+  }
+
+  .comment-box {
+    padding: 10px;
+    overflow: hidden; /* Add overflow property to prevent content overflow */
+    white-space: wrap; /* Prevent text from wrapping to the next line */
+    text-overflow: ellipsis; /* Show an ellipsis (...) when text is truncated */
+  }
+}
+
+
+/* Extra large devices (large desktops) */
+@media only screen and (min-width: 1201px) {
+  .container {
+    padding: 30px;
+  }
+}

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import './style.css';
 
+
 const PostScreen = () => {
   // Get the post ID from the route parameters
   const { id } = useParams();
@@ -30,6 +31,7 @@ const PostScreen = () => {
   return (
     <div className='parent-container'>
     <div className="container">
+    
       <h2 className="postscreen-title">Post Detail</h2>
       {post ? (
         <div>
