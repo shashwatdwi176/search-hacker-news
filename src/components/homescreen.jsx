@@ -3,7 +3,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './style.css';
-import news from '../assests/hacker1.png';
+import hacker from "../assests/hacker1.png"
+
 
 const HomeScreen = () => {
   const [query, setQuery] = useState('');
@@ -39,7 +40,8 @@ const HomeScreen = () => {
     <div className="home-container">
     
     <h1 className="title">Hacker<br/> News <br/>Search</h1>
-      
+    
+    {/* <img className='hacker' src={hacker} alt={"hacker"}/> */}
       <div className="search-container">
         <input
           className="search-input"
@@ -53,6 +55,7 @@ const HomeScreen = () => {
         </button>
         {/* <img className="home-image" src={news} alt="Hacker News" /> */}
       </div>
+      
 
       {loading && <p className="loading">Loading...</p>}
       {error && <p className="error">{error}</p>}
@@ -66,6 +69,7 @@ const HomeScreen = () => {
         ))}
       </ul>
     </div>
+   
     </div>
   );
 };
