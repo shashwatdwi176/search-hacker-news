@@ -28,8 +28,9 @@ const PostScreen = () => {
 
   // Render the component
   return (
+    <div className='parent-container'>
     <div className="container">
-      <h2 className="title">Post Detail</h2>
+      <h2 className="postscreen-title">Post Detail</h2>
       {post ? (
         <div>
           <h3 className="post-title">{post.title}</h3>
@@ -53,6 +54,7 @@ const PostScreen = () => {
         // Show a loading message while fetching data
         <p>Loading...</p>
       )}
+    </div>
     </div>
   );
 };
