@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './style.css';
+import news from '../assests/hacker1.png';
 
 const HomeScreen = () => {
   const [query, setQuery] = useState('');
@@ -23,24 +24,32 @@ const HomeScreen = () => {
   };
 
   useEffect(() => {
-    if (query.trim() !== '') {
-      handleSearch();
-    }
+    const fetchData = async () => {
+      if (query.trim() !== '') {
+        await handleSearch();
+      }
+    };
+
+    fetchData();
+
+    // Remove handleSearch from the dependency array
   }, [query]);
 
   return (
     <div className="home-container">
-      <h1 className="title">Hacker News Search</h1>
+      <h1 className="title">Hacker<br/> News <br/>Search</h1>
       <div className="search-container">
         <input
+          className="search-input"
           type="text"
           placeholder="Search Hacker News"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
         />
-        <button onClick={handleSearch} disabled={loading}>
+        <button className="search-button" onClick={handleSearch} disabled={loading}>
           Search
         </button>
+        {/* <img className="home-image" src={news} alt="Hacker News" /> */}
       </div>
 
       {loading && <p className="loading">Loading...</p>}
